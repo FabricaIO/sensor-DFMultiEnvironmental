@@ -5,7 +5,7 @@
 /// @param address Address of the sensor
 DFMultiEnvironmental::DFMultiEnvironmental(TwoWire* I2C_bus, uint8_t address) : env_sensor(address, I2C_bus) {}
 
-/// @brief Starts the enviromental sensor
+/// @brief Starts the environmental sensor
 /// @return True on success
 bool DFMultiEnvironmental::begin() {
 	values.resize(6);
@@ -19,7 +19,7 @@ bool DFMultiEnvironmental::begin() {
 }
 
 /// @brief Takes a measurement
-/// @return True on suceess
+/// @return True on success
 bool DFMultiEnvironmental::takeMeasurement() {
 	values[0] = env_sensor.getTemperature(TEMP_C);
 	values[1] = env_sensor.getHumidity();
