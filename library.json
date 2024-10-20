@@ -1,0 +1,45 @@
+{
+	"name": "Fabrica-IO Sensor DF Multi Environmental",
+	"version": "0.5.0",
+	"description": "DF Robot multifunctional environmental sensor for Fabrica-IO",
+	"keywords": "Fabrica-IO, sensor, temperature, pressure, humidity, pressure, ambient light, uv",
+	"repository":
+	{
+	  "type": "git",
+	  "url": "https://github.com/FabricaIO/sensor-DFMultiEnvironmental.git"
+	},
+	"authors":
+	[
+	  {
+		"name": "Sam Groveman",
+		"email": "SamGroveman@outlook.com",
+		"url": "https://github.com/FabricaIO"
+	  }
+	],
+	"dependencies": {
+		"DFRobot_EnvironmentalSensor": "https://github.com/DFRobot/DFRobot_EnvironmentalSensor.git"
+	  },
+	"license": "GPLv3",
+	"homepage": "https://github.com/FabricaIO",
+	"frameworks": "arduino",
+	"platforms": "*",
+	"fabrica-io" : {
+		"device": "sensor",
+		"type": "Environment Sensor",
+		"libname": "DFMultiEnvironmental",
+		"includes": ["DFMultiEnvironmental"],
+		"constructor":
+		[
+			{
+				"params": [],
+				"types": [],
+				"defaults": []
+			},
+			{
+				"params": ["I2C_bus", "address"],
+				"types": ["TwoWire*", "uint8_t"],
+				"defaults": ["&Wire", "0x22"]
+			}
+		]
+	}
+  }

@@ -14,7 +14,7 @@
 #include <DFRobot_EnvironmentalSensor.h>
 
 class DFMultiEnvironmental : public Sensor {
-	protected:
+	public:
 		DFMultiEnvironmental(TwoWire* I2C_bus = &Wire, uint8_t address = SEN050X_DEFAULT_DEVICE_ADDRESS);
 		bool begin();
 		bool takeMeasurement();
