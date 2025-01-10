@@ -29,18 +29,19 @@
 		"type": "Environment Sensor",
 		"libname": "DFMultiEnvironmental",
 		"includes": ["DFMultiEnvironmental"],
+		"description": "A sensor that measures temperature, humidity, and ambient light",
 		"constructor":
-		[
-			{
-				"params": [],
-				"types": [],
-				"defaults": []
+		{
+			"I2C_bus": {
+				"type": "TwoWire*",
+				"description": "The I2C bus the sensor is connected to",
+				"default": "&Wire"
 			},
-			{
-				"params": ["I2C_bus", "address"],
-				"types": ["TwoWire*", "uint8_t"],
-				"defaults": ["&Wire", "0x22"]
+			"address": {
+				"type": "uint8_t",
+				"description": "The I2C address of the sensor",
+				"default": "0x22"
 			}
-		]
+		}
 	}
   }
