@@ -8,12 +8,12 @@ DFMultiEnvironmental::DFMultiEnvironmental(TwoWire* I2C_bus, uint8_t address) : 
 /// @brief Starts the environmental sensor
 /// @return True on success
 bool DFMultiEnvironmental::begin() {
-	values.resize(6);
 	Description.parameterQuantity = 6;
 	Description.type = "Multi Environment Sensor";
 	Description.name = "Environmental Sensor";
 	Description.parameters = {"Temperature", "Humidity", "UV Intensity", "Light FLux", "Atmospheric Pressure", "Altitude"};
 	Description.units = {"C", "%RH", "mw/cm^2", "lx", "kpa", "m"};
+	values.resize(Description.parameterQuantity);
 	return env_sensor.begin() == 0;
 }
 

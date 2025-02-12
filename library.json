@@ -25,23 +25,26 @@
 	"frameworks": "arduino",
 	"platforms": "*",
 	"fabrica-io" : {
-		"device": "sensor",
-		"type": "Environment Sensor",
+		"name": "Environmental Sensor",
+		"type": 0,
+		"category": "Environment Sensor",
 		"libname": "DFMultiEnvironmental",
 		"includes": ["DFMultiEnvironmental"],
 		"description": "A sensor that measures temperature, humidity, and ambient light",
 		"constructor":
-		{
-			"I2C_bus": {
+		[
+			{
+				"name": "I2C_bus",
 				"type": "TwoWire*",
 				"description": "The I2C bus the sensor is connected to",
 				"default": "&Wire"
 			},
-			"address": {
+			{
+				"name": "address",
 				"type": "uint8_t",
 				"description": "The I2C address of the sensor",
 				"default": "0x22"
 			}
-		}
+		]
 	}
   }
