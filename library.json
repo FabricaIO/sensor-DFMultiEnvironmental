@@ -33,18 +33,20 @@
 		"description": "A sensor that measures temperature, humidity, and ambient light",
 		"constructor":
 		[
-			{
-				"name": "I2C_bus",
-				"type": "TwoWire*",
-				"description": "The I2C bus the sensor is connected to",
-				"default": "&Wire"
-			},
-			{
-				"name": "address",
-				"type": "uint8_t",
-				"description": "The I2C address of the sensor",
-				"default": "0x22"
-			}
+			[
+				{
+					"name": "I2C_bus",
+					"type": "TwoWire*",
+					"description": "The I2C bus the sensor is connected to",
+					"default": "&Wire"
+				},
+				{
+					"name": "address",
+					"type": "uint8_t",
+					"description": "The I2C address of the sensor",
+					"default": "0x22"
+				}
+			]
 		]
 	}
   }
