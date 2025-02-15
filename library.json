@@ -1,5 +1,5 @@
 {
-	"name": "Fabrica-IO Sensor DF Multi Environmental",
+	"name": "Fabrica-IO Sensor DF Robot Multi Environmental",
 	"version": "0.5.0",
 	"description": "DF Robot multifunctional environmental sensor for Fabrica-IO",
 	"keywords": "Fabrica-IO, sensor, temperature, pressure, humidity, pressure, ambient light, uv",
