@@ -14,6 +14,10 @@ bool DFMultiEnvironmental::begin() {
 	Description.parameters = {"Temperature", "Humidity", "UV Intensity", "Light FLux", "Atmospheric Pressure", "Altitude"};
 	Description.units = {"C", "%RH", "mw/cm^2", "lx", "kpa", "m"};
 	values.resize(Description.parameterQuantity);
+	// Call default setup
+	if (!Sensor::begin()) {
+		return false;
+	}
 	return env_sensor.begin() == 0;
 }
 
