@@ -11,7 +11,7 @@ bool DFMultiEnvironmental::begin() {
 	Description.parameterQuantity = 6;
 	Description.type = "Multi Environment Sensor";
 	Description.name = "Environmental Sensor";
-	Description.parameters = {"Temperature", "Humidity", "UV Intensity", "Light FLux", "Atmospheric Pressure", "Altitude"};
+	Description.parameters = {"Temperature", "Humidity", "UV Intensity", "Light Flux", "Atmospheric Pressure", "Altitude"};
 	Description.units = {"C", "%RH", "mw/cm^2", "lx", "kpa", "m"};
 	values.resize(Description.parameterQuantity);
 	// Call default setup
