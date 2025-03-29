@@ -1,16 +1,16 @@
 #include "DFMultiEnvironmental.h"
 
 /// @brief Creates a new multi environmental sensor object
+/// @param Name The device name
 /// @param I2C_bus The I2C bus attached to the sensor
 /// @param address Address of the sensor
-DFMultiEnvironmental::DFMultiEnvironmental(TwoWire* I2C_bus, uint8_t address) : env_sensor(address, I2C_bus) {}
+DFMultiEnvironmental::DFMultiEnvironmental(String Name, TwoWire* I2C_bus, uint8_t address) : env_sensor(address, I2C_bus), Sensor(Name) {}
 
 /// @brief Starts the environmental sensor
 /// @return True on success
 bool DFMultiEnvironmental::begin() {
 	Description.parameterQuantity = 6;
 	Description.type = "Multi Environment Sensor";
-	Description.name = "Environmental Sensor";
 	Description.parameters = {"Temperature", "Humidity", "UV Intensity", "Light Flux", "Atmospheric Pressure", "Altitude"};
 	Description.units = {"C", "%RH", "mw/cm^2", "lx", "kpa", "m"};
 	values.resize(Description.parameterQuantity);

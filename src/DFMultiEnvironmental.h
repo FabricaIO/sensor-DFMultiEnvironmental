@@ -15,7 +15,7 @@
 
 class DFMultiEnvironmental : public Sensor {
 	public:
-		DFMultiEnvironmental(TwoWire* I2C_bus = &Wire, uint8_t address = SEN050X_DEFAULT_DEVICE_ADDRESS);
+		DFMultiEnvironmental(String Name, TwoWire* I2C_bus = &Wire, uint8_t address = SEN050X_DEFAULT_DEVICE_ADDRESS);
 		bool begin();
 		bool takeMeasurement();
 		
