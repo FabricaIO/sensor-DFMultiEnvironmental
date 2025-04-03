@@ -17,7 +17,7 @@
 	  }
 	],
 	"dependencies": {
-		"DFRobot_EnvironmentalSensor": "https://github.com/DFRobot/DFRobot_EnvironmentalSensor.git",
+		"DFRobot_EnvironmentalSensor": "https://github.com/ShVerni/DFRobot_EnvironmentalSensor.git",
 		"DFRobot_RTU": "https://github.com/DFRobot/DFRobot_RTU"
 	  },
 	"license": "GPLv3",
