@@ -46,6 +46,32 @@
 					"description": "The I2C address of the sensor",
 					"default": "0x22"
 				}
+			],
+			[
+				{
+					"name": "sda",
+					"type": "int",
+					"description": "The SDA pin on the I2C bus",
+					"default": "21"
+				},
+				{
+					"name": "scl",
+					"type": "int",
+					"description": "The SCL pin on the I2C bus",
+					"default": "22"
+				},
+				{
+					"name": "I2C_bus",
+					"type": "TwoWire*",
+					"description": "The I2C bus the sensor is connected to",
+					"default": "&Wire"
+				},
+				{
+					"name": "address",
+					"type": "uint8_t",
+					"description": "The I2C address of the sensor",
+					"default": "0x22"
+				}
 			]
 		]
 	}
