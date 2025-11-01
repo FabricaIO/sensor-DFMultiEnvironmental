@@ -10,10 +10,10 @@ DFMultiEnvironmental::DFMultiEnvironmental(String Name, TwoWire* I2C_bus, uint8_
 
 /// @brief Creates a new multi environmental sensor object
 /// @param Name The device name
-/// @param I2C_bus The I2C bus attached to the sensor
-/// @param address Address of the sensor
 /// @param sda SDA pin to use for I2C bus
 /// @param scl SCL pin to use for I2C bus
+/// @param I2C_bus The I2C bus attached to the sensor
+/// @param address Address of the sensor
 DFMultiEnvironmental::DFMultiEnvironmental(String Name, int sda, int scl, TwoWire* I2C_bus, uint8_t address) : env_sensor(address, I2C_bus), Sensor(Name) {
 	i2c_bus = I2C_bus;
 	scl_pin = scl;
