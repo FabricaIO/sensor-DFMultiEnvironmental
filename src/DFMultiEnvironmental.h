@@ -13,6 +13,7 @@
 #include <Wire.h>
 #include <DFRobot_EnvironmentalSensor.h>
 
+/// @brief Device for interfacing with the DF Robot I2C environmental sensor
 class DFMultiEnvironmental : public Sensor {
 	public:
 		DFMultiEnvironmental(String Name, TwoWire* I2C_bus = &Wire, uint8_t address = SEN050X_DEFAULT_DEVICE_ADDRESS);
